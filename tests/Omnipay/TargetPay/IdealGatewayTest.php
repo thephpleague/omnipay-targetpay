@@ -2,7 +2,7 @@
 
 namespace Omnipay\TargetPay;
 
-use Omnipay\GatewayTestCase;
+use Omnipay\Tests\GatewayTestCase;
 
 class IdealGatewayTest extends GatewayTestCase
 {

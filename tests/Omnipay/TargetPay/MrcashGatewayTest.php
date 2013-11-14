@@ -2,7 +2,7 @@
 
 namespace Omnipay\TargetPay;
 
-use Omnipay\GatewayTestCase;
+use Omnipay\Tests\GatewayTestCase;
 
 class MrcashGatewayTest extends GatewayTestCase
 {

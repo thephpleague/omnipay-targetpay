@@ -2,7 +2,7 @@
 
 namespace Omnipay\TargetPay\Message;
 
-use Omnipay\TestCase;
+use Omnipay\Tests\TestCase;
 
 class IdealCompletePurchaseRequestTest extends TestCase
 {
