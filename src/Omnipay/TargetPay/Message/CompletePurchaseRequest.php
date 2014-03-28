@@ -19,6 +19,10 @@ abstract class CompletePurchaseRequest extends AbstractRequest
      */
     public function getData()
     {
+        if(!$this->getTransactionId() && $trixId = $this->httpRequest->query->get('trxid')){
+            $this->setTransactionId($trixId);
+        }
+        
         $this->validate('transactionId');
 
         return array(
