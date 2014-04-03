@@ -19,11 +19,9 @@ abstract class CompletePurchaseRequest extends AbstractRequest
      */
     public function getData()
     {
-        $this->validate('transactionId');
-
         return array(
             'rtlo' => $this->getSubAccountId(),
-            'trxid' => $this->getTransactionId(),
+            'trxid' => $this->httpRequest->query->get('trxid'),
             'once' => $this->getExchangeOnce(),
             'test' => $this->getTestMode(),
         );

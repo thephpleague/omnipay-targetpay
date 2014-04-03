@@ -14,10 +14,12 @@ class CompletePurchaseRequestTest extends TestCase
 
     protected function setUp()
     {
-        $arguments = array($this->getHttpClient(), $this->getHttpRequest());
+        $request = $this->getHttpRequest();
+        $request->query->set('trxid', '123456');
+
+        $arguments = array($this->getHttpClient(), $request);
         $this->request = m::mock('Omnipay\TargetPay\Message\CompletePurchaseRequest[getEndpoint]', $arguments);
         $this->request->shouldReceive('getEndpoint')->andReturn('http://localhost');
-        $this->request->setTransactionId('123456');
     }
 
     public function testData()
