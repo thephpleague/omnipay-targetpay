@@ -23,7 +23,7 @@
         }
     ],
     "autoload": {
-        "psr-0": { "Omnipay\\TargetPay\\" : "src/" }
+        "psr-4": { "Omnipay\\TargetPay\\" : "src/" }
     },
     "require": {
         "omnipay/common": "~2.0"
