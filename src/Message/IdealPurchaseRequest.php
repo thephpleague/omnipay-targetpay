@@ -13,6 +13,16 @@ class IdealPurchaseRequest extends PurchaseRequest
     {
         return $this->setParameter('issuer', $value);
     }
+    
+    public function setSepa($value)
+    {
+            return $this->setParameter('cinfo_in_callback', $value);
+    }
+
+    public function getSepa()
+    {
+            return $this->getParameter('cinfo_in_callback');
+    }
 
     /**
      * {@inheritdoc}
@@ -30,6 +40,7 @@ class IdealPurchaseRequest extends PurchaseRequest
             'currency' => $this->getCurrency(),
             'returnurl' => $this->getReturnUrl(),
             'reporturl' => $this->getNotifyUrl(),
+            'cinfo_in_callback' =>$this->getSepa(),
         );
     }
 
